@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: rgb(217, 219, 226); 
+  padding: 60px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: rgb(3, 25, 121);
+}
+
+input {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(139, 138, 139);
+  color: black;
+  font-size: 1.2rem;
+  outline: none;
+  padding: 10px 15px;
+  margin: 20px  0px;
+  width: 100%;
+}
+
+.user-card {
+  transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+  transform: scale(1.05);
+}
+
