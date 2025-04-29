@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getUsers } from './path/to/your/api'; // Asegúrate de que la ruta sea correcta
+import { getUsers } from '../api/getUsers';
 
 export const UserList = () => {
     const [users, setUsers] = useState([]);
@@ -26,12 +26,12 @@ export const UserList = () => {
 
     return (
         <div>
-            {users.map(user => (
-                <div key={user.id}>
-                    <h2>{user.name}</h2>
-                    <p>Email: {user.email}</p>
-                    <p>Teléfono: {user.phone}</p>
-                    <p>Empresa: {user.company}</p>
+            {users.map(({id, name, email, phone, company}) => (
+                <div key={id}>
+                    <h2>{name}</h2>
+                    <p>Email: {email}</p>
+                    <p>Teléfono: {phone}</p>
+                    <p>Empresa: {company}</p>
                 </div>
             ))}
         </div>
